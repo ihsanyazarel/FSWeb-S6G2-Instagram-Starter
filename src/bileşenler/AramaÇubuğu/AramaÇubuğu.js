@@ -5,7 +5,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart, faCircle, faCompass } from '@fortawesome/free-regular-svg-icons';
 import "./AramaÇubuğu.css";
 
-const AramaÇubuğu = (props) => {
+const AramaÇubuğu = ({aramaDegeri , setAramaDegeri}) => {
   return (
     <div className="search-bar-wrapper">
       <div className="social">
@@ -15,6 +15,8 @@ const AramaÇubuğu = (props) => {
         <input
           type="text"
           placeholder="Arama"
+          onChange={e => setAramaDegeri(e.target.value)}
+          value={aramaDegeri}
         />
       </form>
       <div className="social-wrapper">
